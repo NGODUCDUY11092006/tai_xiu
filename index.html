@@ -1,0 +1,292 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Tài Xỉu Game - Modern Vietnamese Dice Game</title>
+  <meta name="description" content="Play the traditional Vietnamese Tài Xỉu dice game with a modern interface">
+  <meta name="author" content="Lovable">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div class="container">
+    <header>
+      <div class="header-left">
+        <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="#FFC107" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="dices-icon">
+          <rect width="12" height="12" x="2" y="10" rx="2" ry="2"></rect>
+          <path d="m17.92 14 3.5-3.5a2.24 2.24 0 0 0 0-3l-5-4.92a2.24 2.24 0 0 0-3 0L10 6"></path>
+          <path d="M6 18h.01"></path>
+          <path d="M10 14h.01"></path>
+          <path d="M15 6h.01"></path>
+          <path d="M18 9h.01"></path>
+        </svg>
+        <h1>Tài Xỉu Game</h1>
+      </div>
+      
+      <div class="header-right">
+        <div class="balance">
+          <span>Balance:</span>
+          <span id="balance" class="balance-amount">10,000 ₫</span>
+        </div>
+        
+        <button id="reset-game" class="reset-btn">
+          <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M21.5 2v6h-6"></path>
+            <path d="M2.5 12a10 10 0 0 1 15-8.3"></path>
+            <path d="M19 15v6h6"></path>
+            <path d="M2.5 12a10 10 0 0 0 15 8.3"></path>
+          </svg>
+          Reset
+        </button>
+      </div>
+    </header>
+    
+    <div class="main-content">
+      <div class="left-column">
+        <div class="game-board">
+          <h2>Tài Xỉu</h2>
+          
+          <div class="dice-container">
+            <div class="dice" id="dice1">
+              <div class="dice-face dice-face-1">
+                <div class="dot"></div>
+              </div>
+              <div class="dice-face dice-face-2">
+                <div class="dot"></div>
+                <div class="dot"></div>
+              </div>
+              <div class="dice-face dice-face-3">
+                <div class="dot"></div>
+                <div class="dot"></div>
+                <div class="dot"></div>
+              </div>
+              <div class="dice-face dice-face-4">
+                <div class="dot"></div>
+                <div class="dot"></div>
+                <div class="dot"></div>
+                <div class="dot"></div>
+              </div>
+              <div class="dice-face dice-face-5">
+                <div class="dot"></div>
+                <div class="dot"></div>
+                <div class="dot"></div>
+                <div class="dot"></div>
+                <div class="dot"></div>
+              </div>
+              <div class="dice-face dice-face-6">
+                <div class="dot"></div>
+                <div class="dot"></div>
+                <div class="dot"></div>
+                <div class="dot"></div>
+                <div class="dot"></div>
+                <div class="dot"></div>
+              </div>
+            </div>
+            
+            <div class="dice" id="dice2">
+              <div class="dice-face dice-face-1">
+                <div class="dot"></div>
+              </div>
+              <div class="dice-face dice-face-2">
+                <div class="dot"></div>
+                <div class="dot"></div>
+              </div>
+              <div class="dice-face dice-face-3">
+                <div class="dot"></div>
+                <div class="dot"></div>
+                <div class="dot"></div>
+              </div>
+              <div class="dice-face dice-face-4">
+                <div class="dot"></div>
+                <div class="dot"></div>
+                <div class="dot"></div>
+                <div class="dot"></div>
+              </div>
+              <div class="dice-face dice-face-5">
+                <div class="dot"></div>
+                <div class="dot"></div>
+                <div class="dot"></div>
+                <div class="dot"></div>
+                <div class="dot"></div>
+              </div>
+              <div class="dice-face dice-face-6">
+                <div class="dot"></div>
+                <div class="dot"></div>
+                <div class="dot"></div>
+                <div class="dot"></div>
+                <div class="dot"></div>
+                <div class="dot"></div>
+              </div>
+            </div>
+            
+            <div class="dice" id="dice3">
+              <div class="dice-face dice-face-1">
+                <div class="dot"></div>
+              </div>
+              <div class="dice-face dice-face-2">
+                <div class="dot"></div>
+                <div class="dot"></div>
+              </div>
+              <div class="dice-face dice-face-3">
+                <div class="dot"></div>
+                <div class="dot"></div>
+                <div class="dot"></div>
+              </div>
+              <div class="dice-face dice-face-4">
+                <div class="dot"></div>
+                <div class="dot"></div>
+                <div class="dot"></div>
+                <div class="dot"></div>
+              </div>
+              <div class="dice-face dice-face-5">
+                <div class="dot"></div>
+                <div class="dot"></div>
+                <div class="dot"></div>
+                <div class="dot"></div>
+                <div class="dot"></div>
+              </div>
+              <div class="dice-face dice-face-6">
+                <div class="dot"></div>
+                <div class="dot"></div>
+                <div class="dot"></div>
+                <div class="dot"></div>
+                <div class="dot"></div>
+                <div class="dot"></div>
+              </div>
+            </div>
+          </div>
+          
+          <div id="game-result" class="game-result"></div>
+          
+          <div id="dice-total" class="dice-total">
+            <div class="total">Total: 3</div>
+            <div class="result">Xỉu (Small)</div>
+          </div>
+        </div>
+        
+        <div class="game-history">
+          <h2>
+            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <rect width="12" height="12" x="2" y="10" rx="2" ry="2"></rect>
+              <path d="m17.92 14 3.5-3.5a2.24 2.24 0 0 0 0-3l-5-4.92a2.24 2.24 0 0 0-3 0L10 6"></path>
+              <path d="M6 18h.01"></path>
+              <path d="M10 14h.01"></path>
+              <path d="M15 6h.01"></path>
+              <path d="M18 9h.01"></path>
+            </svg>
+            Game History
+          </h2>
+          
+          <div class="history-table-container">
+            <table id="history-table">
+              <thead>
+                <tr>
+                  <th>Time</th>
+                  <th>Dice</th>
+                  <th>Bet</th>
+                  <th>Result</th>
+                </tr>
+              </thead>
+              <tbody id="history-body">
+                <tr class="no-history">
+                  <td colspan="4">No games played yet. Place your bets and roll the dice!</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+      </div>
+      
+      <div class="right-column">
+        <div class="betting-panel">
+          <div class="panel-header">
+            <h2>Place Your Bet</h2>
+            <div class="panel-balance">Balance: <span id="panel-balance-amount">10,000 ₫</span></div>
+          </div>
+          
+          <div class="bet-controls">
+            <div class="bet-amount">
+              <label for="bet-amount">Bet Amount</label>
+              <input type="number" id="bet-amount" min="10" value="100">
+            </div>
+            
+            <div class="quick-bets">
+              <button class="quick-bet" data-amount="100">+100</button>
+              <button class="quick-bet" data-amount="500">+500</button>
+              <button class="quick-bet" data-amount="1000">+1,000</button>
+              <button class="quick-bet" data-amount="half">Half</button>
+              <button class="quick-bet" data-amount="max">Max</button>
+            </div>
+            
+            <div class="bet-options">
+              <button id="bet-tai" class="bet-option tai">
+                Tài (Big)
+                <span>11-18</span>
+              </button>
+              <button id="bet-xiu" class="bet-option xiu">
+                Xỉu (Small)
+                <span>3-10</span>
+              </button>
+            </div>
+            
+            <button id="roll-dice" class="roll-btn" disabled>Roll Dice</button>
+          </div>
+        </div>
+        
+        <div class="game-rules">
+          <h2>
+            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <circle cx="12" cy="12" r="10"></circle>
+              <path d="M9.09 9a3 3 0 0 1 5.83 1c0 2-3 3-3 3"></path>
+              <path d="M12 17h.01"></path>
+            </svg>
+            Game Rules
+          </h2>
+          
+          <div class="rules-content">
+            <p>
+              <strong>Tài Xỉu</strong> is a traditional Vietnamese dice game where players bet on the outcome of three dice.
+            </p>
+            
+            <div class="rule-section">
+              <p class="rule-title tai-color">Tài (Big):</p>
+              <ul>
+                <li>Total sum of dice is between 11 and 18</li>
+              </ul>
+            </div>
+            
+            <div class="rule-section">
+              <p class="rule-title xiu-color">Xỉu (Small):</p>
+              <ul>
+                <li>Total sum of dice is between 3 and 10</li>
+              </ul>
+            </div>
+            
+            <div class="rule-section">
+              <p class="rule-title">How to play:</p>
+              <ol>
+                <li>Choose your bet amount</li>
+                <li>Select either Tài (Big) or Xỉu (Small)</li>
+                <li>Click "Roll Dice" to see the outcome</li>
+                <li>If you win, you get double your bet amount</li>
+              </ol>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    
+    <footer>
+      <p>© <span id="current-year"></span> Tài Xỉu Game. Created with 💜 for fun!</p>
+      <p>This is a simulation game. No real money is involved.</p>
+    </footer>
+  </div>
+  
+  <div id="toast" class="toast"></div>
+  
+  <script src="styles.js"></script>
+</body>
+</html>
